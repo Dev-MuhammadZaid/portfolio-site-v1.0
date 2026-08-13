@@ -1,0 +1,522 @@
+PROJECT ARCHITECTURE
+
+Project Name:
+Muhammad Zaid — Frontend Developer Portfolio
+
+1. PROJECT GOAL
+
+---
+
+Build a modern, responsive, accessible, and maintainable personal portfolio website that presents the developer's skills, projects, development process, learning journey, and contact information.
+
+The project should remain simple enough for a vanilla HTML, CSS, and JavaScript portfolio while following professional frontend development practices.
+
+2. TECHNOLOGY STACK
+
+---
+
+HTML5
+
+- Semantic page structure
+- SEO metadata
+- Accessibility attributes
+- Forms
+- Project embeds
+
+CSS3
+
+- Custom properties
+- Responsive layout
+- Reusable components
+- Light and dark themes
+- Transitions
+- Accessibility focus styles
+
+JavaScript ES6
+
+- Theme switching
+- localStorage persistence
+- Mobile navigation
+- Scroll-to-top behavior
+- Accessibility state management
+
+External Resources
+
+- Google Fonts — Inter
+- Font Awesome
+
+3. PAGE STRUCTURE
+
+---
+
+HTML
+│
+├── HEAD
+│   ├── Character Encoding
+│   ├── Viewport
+│   ├── Description
+│   ├── Author
+│   ├── Robots
+│   ├── Theme Color
+│   ├── Canonical URL
+│   ├── Open Graph Metadata
+│   ├── Font Preconnect
+│   ├── Google Font
+│   ├── Favicon
+│   └── Stylesheets
+│
+├── BODY
+│   │
+│   ├── Skip Link
+│   │
+│   ├── Theme Toggle
+│   │
+│   ├── Go To Top Button
+│   │
+│   ├── HEADER
+│   │   ├── Logo
+│   │   ├── Navigation
+│   │   └── Mobile Navigation Button
+│   │
+│   ├── MAIN
+│   │   │
+│   │   ├── Hero
+│   │   ├── About
+│   │   ├── Skills
+│   │   ├── Projects
+│   │   ├── Development Process
+│   │   ├── Why Work With Me
+│   │   ├── Currently Learning
+│   │   └── Contact
+│   │
+│   ├── FOOTER
+│   │
+│   └── JavaScript
+│
+└── END
+
+4. COMPONENT ARCHITECTURE
+
+---
+
+The project uses reusable CSS components instead of styling every element independently.
+
+Primary reusable components:
+
+.btn
+Base button component.
+
+.btn-primary
+Primary call-to-action variation.
+
+.btn-secondary
+Secondary button variation.
+
+.section-card
+Shared visual container for major page sections.
+
+.t-btn
+Scroll-to-top button.
+
+.dark-button
+Theme toggle button.
+
+.nav-button
+Mobile navigation toggle.
+
+.navigation
+Primary navigation component.
+
+5. DESIGN TOKEN SYSTEM
+
+---
+
+All major visual values should be controlled through CSS custom properties.
+
+Color Tokens:
+
+--primary-color
+--accent-color
+--bg-color
+--surface-color
+--text-color
+--text-muted
+--border-color
+
+Radius Tokens:
+
+--radius-sm
+--radius-md
+--radius-lg
+--radius-xl
+
+Shadow Tokens:
+
+--shadow-sm
+--shadow-md
+
+Transition:
+
+--transition
+
+The purpose of this system is to prevent individual components from creating unrelated colors, border radiuses, and shadows.
+
+Components should consume the global tokens instead of defining their own theme values whenever possible.
+
+6. THEME ARCHITECTURE
+
+---
+
+The project supports two visual themes:
+
+Light Theme
+Default :root variables.
+
+Dark Theme
+body.dark-theme variables.
+
+JavaScript is responsible only for changing the theme state.
+
+CSS is responsible for defining how each theme looks.
+
+The selected theme is stored in localStorage so the user's preference can persist between page visits.
+
+7. JAVASCRIPT RESPONSIBILITIES
+
+---
+
+JavaScript contains only behavior that requires interaction or browser APIs.
+
+Theme
+- Read saved theme.
+- Apply dark theme.
+- Toggle light/dark mode.
+- Save the selected theme.
+- Update theme icon.
+
+Navigation
+- Open mobile navigation.
+- Close mobile navigation.
+- Update aria-expanded.
+- Update navigation button label.
+- Update menu icon.
+- Close navigation after selecting a link.
+
+Scroll
+- Detect page scroll position.
+- Show/hide scroll-to-top button.
+- Scroll to the top smoothly.
+
+8. DATA FLOW
+
+---
+
+Theme:
+
+User clicks theme button
+↓
+toggleTheme()
+↓
+body.dark-theme
+↓
+CSS variables change
+↓
+localStorage stores preference
+
+Mobile Navigation:
+
+User clicks menu button
+↓
+navigation.active
+↓
+Navigation becomes visible
+↓
+aria-expanded becomes true
+
+User closes/selects navigation
+↓
+navigation.active removed
+↓
+aria-expanded becomes false
+
+Scroll:
+
+User scrolls
+↓
+handleScroll()
+↓
+Check window.scrollY
+↓
+Add/remove .show
+↓
+Top button appears/disappears
+
+9. ACCESSIBILITY ARCHITECTURE
+
+---
+
+The project should support keyboard and assistive-technology users.
+
+Accessibility features:
+
+- Semantic HTML
+- Skip link
+- Visible focus states
+- aria-label for icon-only controls
+- aria-expanded for mobile navigation
+- aria-controls for navigation relationship
+- Descriptive image alt text
+- iframe titles
+- Proper form labels
+- Required form fields
+- Correct input types
+- Keyboard-accessible buttons
+- aria-hidden for decorative icons
+
+10. SEO ARCHITECTURE
+
+---
+
+The page includes:
+
+- Descriptive title
+- Meta description
+- Author metadata
+- Robots directive
+- Canonical URL
+- Open Graph metadata
+- Semantic headings
+- Semantic HTML structure
+- Descriptive links
+- Descriptive image alt text
+
+The canonical URL and Open Graph URLs must be replaced with the actual deployed website URL before production.
+
+11. RESPONSIVE ARCHITECTURE
+
+---
+
+Desktop:
+
+- Horizontal navigation
+- Two-column hero layout
+- Multi-column project layout
+- Two-column contact layout
+
+Mobile:
+
+- Hamburger navigation
+- Vertical hero layout
+- Full-width buttons
+- Single-column contact layout
+- Responsive project cards
+- Reduced spacing and image sizes
+
+12. VISUAL SYSTEM
+
+---
+
+Primary visual direction:
+
+Blue + Cyan + Neutral surfaces.
+
+Light Mode:
+
+Primary:
+#2563eb
+
+Accent:
+#06b6d4
+
+Background:
+#f8fafc
+
+Surface:
+#ffffff
+
+Text:
+#0f172a
+
+Muted:
+#64748b
+
+Dark Mode:
+
+Primary:
+#3b82f6
+
+Accent:
+#22d3ee
+
+Background:
+#07111f
+
+Surface:
+#0d1b2a
+
+Text:
+#f8fafc
+
+Muted:
+#b8c7d9
+
+13. PROJECT STRUCTURE
+
+---
+
+portfolio/
+│
+├── index.html
+├── README.md
+├── LICENSE
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   └── script.js
+│
+├── prompt/
+│   └── prompt.txt
+│
+├── architecture/
+│   └── architecture.txt
+│
+└── assets/
+├── images/
+├── icons/
+
+14. NAMING CONVENTION
+
+---
+
+Files:
+lowercase-kebab-case
+
+Examples:
+index.html
+style.css
+script.js
+social-preview.png
+
+CSS Classes:
+lowercase-kebab-case
+
+Examples:
+.section-card
+.btn-primary
+.nav-button
+.contact-info
+
+JavaScript Variables:
+camelCase
+
+Examples:
+topBtn
+menuButton
+navigation
+darkButton
+themeIcon
+
+HTML IDs:
+lowercase-kebab-case
+
+Examples:
+#home
+#about
+#project
+#contact
+
+15. MAINTAINABILITY RULES
+
+---
+
+1. Do not create a new color when an existing design token can be reused.
+
+2. Do not duplicate common button styles.
+
+3. Use .btn for shared button behavior.
+
+4. Use .section-card for shared section styling.
+
+5. Keep JavaScript focused on behavior.
+
+6. Keep visual styling inside CSS.
+
+7. Keep content inside HTML.
+
+8. Use semantic HTML before adding ARIA.
+
+9. Use ARIA only when it provides additional accessibility information.
+
+10. Keep naming consistent.
+
+11. Remove unused variables and selectors.
+
+12. Avoid unnecessary abstractions for a small vanilla JavaScript project.
+
+13. Preserve the current v1 feature scope unless a new feature is intentionally planned.
+
+14. Keep light and dark themes controlled through CSS variables.
+
+15. Test the page after every structural or CSS refactor.
+
+16. SENIOR DEVELOPMENT FORMULA
+
+---
+
+Before changing a component, identify:
+
+Goal
+What should this component achieve?
+
+Structure
+Which HTML elements represent it?
+
+Style
+Which design tokens control it?
+
+Behavior
+Does JavaScript need to control it?
+
+Accessibility
+Can keyboard and assistive-technology users operate it?
+
+Responsive Behavior
+How should it behave on smaller screens?
+
+Reusability
+Can the common behavior be extracted into a reusable class?
+
+17. CURRENT V1 FEATURE SCOPE
+
+---
+
+Included:
+
+- Responsive navigation
+- Hero section
+- About section
+- Skills section
+- Project previews
+- Development process
+- Why Work With Me
+- Learning section
+- Contact section
+- Dark/light theme
+- Persistent theme preference
+- Scroll-to-top button
+- Responsive layout
+- Accessibility improvements
+- SEO metadata
+- Social sharing metadata
+
+18. ARCHITECTURAL PRINCIPLE
+
+---
+
+Keep the project simple, readable, reusable, accessible, and maintainable.
+
+Do not introduce frameworks, build tools, unnecessary folders, or complex abstractions unless the project's requirements justify them.
+
+The architecture should support future growth without making the current v1 unnecessarily complicated.
