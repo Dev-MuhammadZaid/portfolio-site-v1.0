@@ -1,0 +1,725 @@
+PORTFOLIO RECREATION PROMPT
+
+ROLE
+
+Act as a Senior Frontend Engineer, HTML5 Expert, CSS Architect, Vanilla JavaScript Developer, UI/UX Designer, Accessibility Engineer, Responsive Design Expert, and Frontend Code Reviewer.
+
+PRIMARY OBJECTIVE
+
+Recreate the provided portfolio website as accurately as possible from the supplied source files.
+
+The supplied files are the source of truth:
+
+- index.html
+- style.css
+- script.js
+
+Your task is to understand the existing structure, visual system, responsive behavior, interactions, content hierarchy, component architecture, and design tokens before generating the implementation.
+
+Do not redesign the website based on your personal preferences.
+
+The result should preserve the original visual identity and layout while reproducing its behavior and architecture accurately.
+
+SOURCE OF TRUTH RULE
+
+The supplied HTML, CSS, and JavaScript files have the highest priority.
+
+Do not invent:
+
+- New sections
+- New features
+- New page layouts
+- New navigation items
+- New animations
+- New colors
+- New components
+- New content
+
+unless explicitly requested.
+
+If something exists in the source files, reproduce it.
+
+If something does not exist in the source files, do not add it merely because you think it would improve the design.
+
+PROJECT TYPE
+
+Personal frontend developer portfolio.
+
+Technology requirements:
+
+- HTML5
+- CSS3
+- Vanilla JavaScript ES6
+
+Do not use:
+
+- React
+- Vue
+- Angular
+- Bootstrap
+- Tailwind CSS
+- jQuery
+- JavaScript frameworks
+- CSS frameworks
+
+unless explicitly requested.
+
+DESIGN DIRECTION
+
+The visual identity is based on:
+
+- Modern frontend portfolio
+- Blue primary color
+- Cyan accent
+- Clean neutral surfaces
+- Rounded cards
+- Soft borders
+- Subtle shadows
+- Responsive layout
+- Minimal modern UI
+- Light and dark themes
+
+COLOR SYSTEM
+
+Use CSS custom properties.
+
+Light theme:
+
+Primary:
+#2563eb
+
+Accent:
+#06b6d4
+
+Background:
+#f8fafc
+
+Surface:
+#ffffff
+
+Text:
+#0f172a
+
+Muted:
+#64748b
+
+Border:
+#dbe7f0
+
+Dark theme:
+
+Primary:
+#3b82f6
+
+Accent:
+#22d3ee
+
+Background:
+#07111f
+
+Surface:
+#0d1b2a
+
+Text:
+#f8fafc
+
+Muted:
+#b8c7d9
+
+Border:
+#1e3a5f
+
+Do not introduce unrelated colors unless required for a technology icon or an existing visual element.
+
+DESIGN TOKENS
+
+Create centralized CSS custom properties for:
+
+- Colors
+- Border radius
+- Shadows
+- Transitions
+
+Example architecture:
+
+:root {
+--primary-color: ...;
+--accent-color: ...;
+--bg-color: ...;
+--surface-color: ...;
+--text-color: ...;
+--text-muted: ...;
+--border-color: ...;
+
+--radius-sm: ...;
+--radius-md: ...;
+--radius-lg: ...;
+--radius-xl: ...;
+
+--shadow-sm: ...;
+--shadow-md: ...;
+
+--transition: ...;
+
+}
+
+REUSABLE COMPONENTS
+
+Use reusable CSS classes.
+
+Required base components:
+
+.btn
+.btn-primary
+.btn-secondary
+.section-card
+
+Other components should be created only when repeated structure justifies them.
+
+Avoid duplicating the same CSS rules for multiple sections.
+
+PAGE STRUCTURE
+
+The page should contain:
+
+1. Skip link
+2. Theme toggle
+3. Scroll-to-top button
+4. Header
+5. Navigation
+6. Hero
+7. About
+8. Skills
+9. Projects
+10. Development Process
+11. Why Work With Me
+12. Currently Learning
+13. Contact
+14. Footer
+
+HEADER
+
+The header contains:
+
+- Developer logo/name
+- Primary navigation
+- Mobile navigation button
+
+Navigation links:
+
+- Home
+- About
+- Projects
+- Contact
+
+The header should remain visually consistent with the source design.
+
+Use semantic HTML.
+
+MOBILE NAVIGATION
+
+Desktop:
+
+Navigation is visible horizontally.
+
+Mobile:
+
+Navigation becomes a hidden dropdown controlled by the hamburger button.
+
+The hamburger button must use:
+
+aria-expanded
+aria-controls
+aria-label
+
+The value of "aria-expanded" must accurately represent the current state.
+
+Closed:
+
+aria-expanded="false"
+
+Open:
+
+aria-expanded="true"
+
+When open, update the accessible label appropriately.
+
+When a navigation link is selected on mobile, close the menu.
+
+HERO
+
+The hero section contains:
+
+- Main heading
+- Developer name
+- Professional title
+- Short description
+- Profile image
+- View Projects button
+- Contact Me button
+
+Desktop layout:
+
+Text and image appear in a horizontal layout.
+
+Mobile layout:
+
+Content becomes vertically stacked.
+
+Buttons remain accessible and responsive.
+
+ABOUT SECTION
+
+Display:
+
+- Professional background
+- Current development direction
+- Long-term goal
+
+Keep the content hierarchy and visual structure from the source files.
+
+SKILLS SECTION
+
+Display three groups:
+
+Languages
+Currently Learning
+Future Technologies
+
+Current language skills:
+
+- HTML5
+- CSS3
+- JavaScript (ES6)
+
+Currently learning:
+
+- JavaScript Patterns
+- React
+- Tailwind CSS
+- Git & GitHub
+- Chrome DevTools
+- UI/UX
+- Technical SEO
+- Software Architecture
+- Debugging
+
+Future technologies:
+
+- Node.js
+- Express.js
+- MongoDB
+- Next.js
+
+PROJECT SECTION
+
+Display project preview cards.
+
+Each project card contains:
+
+- Project preview
+- Project name
+- Live Demo action
+
+Use accessible iframe titles when iframes are used.
+
+Project filenames should use correct spelling and consistent naming.
+
+Preferred naming:
+
+word-counter.html
+password-generator.html
+calculator.html
+
+DEVELOPMENT PROCESS
+
+Display the development process in ordered sequence:
+
+1. Analyze Requirements
+2. Plan Features
+3. Design Architecture
+4. Develop Components
+5. Debug & Test
+6. Optimize Performance
+7. Deploy Project
+
+WHY WORK WITH ME
+
+Display the developer's working principles:
+
+- Clean Code
+- Responsive Design
+- Semantic HTML
+- Accessible UI
+- Performance Focused
+- Continuous Learner
+- Problem Solver
+
+LEARNING SECTION
+
+Display a short paragraph describing continuous frontend development and learning.
+
+CONTACT SECTION
+
+The contact section should have:
+
+Left side:
+
+- Heading
+- Short introduction
+- Contact details
+
+Right side:
+
+- Name input
+- Email input
+- Message textarea
+- Submit button
+
+Use real form labels.
+
+Do not replace visible labels with placeholders.
+
+Use:
+
+type="email"
+
+for email fields.
+
+Use appropriate autocomplete attributes.
+
+Use required validation where appropriate.
+
+CONTACT VISUAL DESIGN
+
+The contact section must use the same global theme system as the rest of the website.
+
+Do not create independent hard-coded colors.
+
+Do not use undefined CSS variables.
+
+Every contact component must consume the project's design tokens.
+
+The contact section must work correctly in both light and dark themes.
+
+THEME SYSTEM
+
+Implement light/dark mode using:
+
+body.dark-theme
+
+JavaScript must:
+
+1. Read saved theme.
+2. Apply saved theme.
+3. Toggle theme.
+4. Save theme in localStorage.
+5. Update theme icon.
+
+CSS must control the actual visual changes through custom properties.
+
+SCROLL TO TOP
+
+Display the scroll-to-top button after the user scrolls down.
+
+Use:
+
+window.scrollY
+
+to determine visibility.
+
+When clicked:
+
+window.scrollTo({
+top: 0,
+behavior: "smooth"
+});
+
+ACCESSIBILITY
+
+Implement:
+
+- Semantic HTML
+- Skip link
+- Keyboard focus styles
+- ":focus-visible"
+- Descriptive image alt text
+- Accessible icon buttons
+- "aria-expanded"
+- "aria-controls"
+- Appropriate "aria-label"
+- "aria-hidden="true"" for decorative icons
+- Proper form labels
+- Proper input types
+- Required fields
+- Descriptive iframe titles
+
+Do not add ARIA attributes unnecessarily when native HTML already provides the required semantics.
+
+SEO
+
+Include:
+
+<title><meta name="description"><meta name="author"><meta name="robots"><link rel="canonical"><meta name="theme-color">Open Graph metadata:
+
+og:type
+og:title
+og:description
+og:url
+og:image
+
+FONT
+
+Use Inter.
+
+Load it through Google Fonts.
+
+Use:
+
+preconnect
+
+for:
+
+https://fonts.googleapis.com
+
+and:
+
+https://fonts.gstatic.com
+
+Use:
+
+display=swap
+
+in the Google Fonts request.
+
+RESPONSIVE DESIGN
+
+The website must work correctly on:
+
+- Desktop
+- Tablet
+- Mobile
+
+Do not create a separate mobile website.
+
+Use responsive CSS media queries.
+
+The mobile navigation should replace the desktop navigation behavior at the appropriate breakpoint.
+
+Project cards should adapt to available width.
+
+The contact layout should change from two columns to one column on smaller screens.
+
+CSS ARCHITECTURE
+
+Organize CSS logically:
+
+1. Design tokens
+2. Dark theme tokens
+3. Base/reset
+4. Accessibility
+5. Theme controls
+6. Header/navigation
+7. Reusable components
+8. Hero
+9. About
+10. Skills
+11. Projects
+12. Development process
+13. Learning
+14. Contact
+15. Footer
+16. Responsive media queries
+
+JAVASCRIPT ARCHITECTURE
+
+Keep JavaScript small and focused.
+
+JavaScript responsibilities:
+
+- Theme
+- Navigation
+- Scroll behavior
+
+Do not create unnecessary functions merely to make the code appear more professional.
+
+Create functions when they improve:
+
+- Reusability
+- Readability
+- Separation of behavior
+- Maintainability
+
+NAMING RULES
+
+Files:
+
+lowercase-kebab-case
+
+Examples:
+
+index.html
+style.css
+script.js
+word-counter.html
+password-generator.html
+social-preview.png
+
+CSS:
+
+lowercase-kebab-case
+
+Examples:
+
+.section-card
+.btn-primary
+.nav-button
+.contact-info
+
+JavaScript:
+
+camelCase
+
+Examples:
+
+topBtn
+menuButton
+navigation
+darkButton
+themeIcon
+
+HTML IDs:
+
+lowercase-kebab-case
+
+Examples:
+
+home
+about
+project
+contact
+main-content
+
+CODE QUALITY RULES
+
+Write clean and readable code.
+
+Remove:
+
+- Unused variables
+- Dead selectors
+- Duplicate CSS
+- Undefined CSS variables
+- Unnecessary ARIA
+- Repeated styles
+- Unnecessary JavaScript
+
+Do not use:
+
+var
+
+unless there is an explicit reason.
+
+Prefer:
+
+const
+
+and:
+
+let
+
+IMPORTANT REFACTORING RULE
+
+Do not confuse refactoring with redesign.
+
+Refactoring means:
+
+- Better naming
+- Less duplication
+- Better organization
+- Reusable classes
+- Fixed bugs
+- Better accessibility
+- Better maintainability
+
+It does NOT mean:
+
+- Completely changing the UI
+- Adding random animations
+- Adding extra sections
+- Changing the project's identity
+
+OUTPUT REQUIREMENTS
+
+When generating the project, provide:
+
+1. index.html
+2. css/style.css
+3. js/script.js
+
+Ensure all paths are correct.
+
+Ensure HTML classes match CSS selectors.
+
+Ensure JavaScript selectors match HTML elements.
+
+Ensure every JavaScript behavior has a corresponding HTML element.
+
+Ensure every CSS custom property used in the stylesheet is defined.
+
+FINAL VALIDATION
+
+Before presenting the final code, perform this checklist:
+
+HTML:
+
+- Valid structure
+- Correct nesting
+- Semantic elements
+- Correct IDs
+- Correct links
+- Correct image alt text
+- Correct form labels
+- SEO metadata
+- Open Graph metadata
+- Canonical URL
+- Accessibility attributes
+
+CSS:
+
+- No undefined variables
+- No unnecessary duplicate rules
+- Reusable button styles
+- Reusable section styles
+- Consistent radius
+- Consistent colors
+- Light theme works
+- Dark theme works
+- Responsive layout works
+- Focus styles work
+
+JavaScript:
+
+- Theme toggle works
+- Theme persistence works
+- Navigation opens
+- Navigation closes
+- aria-expanded is accurate
+- aria-label changes appropriately
+- Navigation links close mobile menu
+- Scroll button appears
+- Scroll button hides
+- Scroll-to-top works
+- No unused selectors
+- No console errors
+
+VISUAL:
+
+- Preserve original layout
+- Preserve original section hierarchy
+- Preserve blue/cyan identity
+- Preserve responsive behavior
+- Preserve component relationships
+- Do not invent unrelated UI
+
+The final implementation must feel like the same portfolio recreated from the source files, not like a completely different portfolio design.
