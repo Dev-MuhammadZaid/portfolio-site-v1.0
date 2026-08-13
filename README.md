@@ -1,12 +1,36 @@
-Muhammad Zaid — Frontend Developer Portfolio
+# Muhammad Zaid — Frontend Developer Portfolio
 
 A modern, responsive, and accessible personal portfolio website built with HTML5, CSS3, and vanilla JavaScript.
 
 The portfolio presents my frontend development skills, selected projects, development process, current learning journey, and contact information.
 
 ---
+## 🖥️ Responsive Design
 
-About
+<div align="center">
+
+<img width="1536" height="1024" alt="responsive-preview" src="https://github.com/user-attachments/assets/60f628b7-1313-4cc2-b387-39cb167f3cf9" />
+
+
+<br><br>
+
+**Desktop • Tablet • Mobile**
+
+</div>
+
+---
+
+## 🌐 Website Preview
+
+<div align="center">
+
+<img width="1536" height="1024" alt="social-preview" src="https://github.com/user-attachments/assets/6b7efc4c-9009-4d79-9984-b5e69591be9e" />
+
+
+</div>
+
+---
+## About
 
 I am a frontend web developer focused on building clean, responsive, accessible, and user-friendly websites.
 
@@ -24,11 +48,11 @@ My current development focus includes:
 - Technical SEO
 - Chrome DevTools
 
-My long-term goal is to become a production-ready MERN frontend developer capable of building scalable and maintainable web applications.
+**My long-term goal is to become a production-ready MERN frontend developer capable of building scalable and maintainable web applications.**
 
 ---
 
-Features
+## Features
 
 - Responsive portfolio layout
 - Mobile navigation
@@ -49,7 +73,7 @@ Features
 
 ---
 
-Tech Stack
+## Tech Stack
 
 Frontend
 
@@ -64,7 +88,7 @@ External Resources
 
 ---
 
-Design System
+## Design System
 
 The visual design follows a blue and cyan color direction.
 
@@ -78,7 +102,7 @@ Surface| "#ffffff"
 Text| "#0f172a"
 Muted| "#64748b"
 
-Dark Theme
+## Dark Theme
 
 Token| Value
 Primary| "#3b82f6"
@@ -90,8 +114,8 @@ Muted| "#b8c7d9"
 
 ---
 
-Project Structure
-
+## Project Structure
+<pre>
 portfolio/
 │
 ├── index.html
@@ -113,28 +137,28 @@ portfolio/
 └── assets/
     ├── images/
     ├── icons/
-
+</pre>
 ---
 
-Main Sections
+## Main Sections
 
-Hero
+### Hero
 
 Introduces the developer, professional role, short description, and primary actions.
 
-About
+### About
 
 Provides background, current development direction, and long-term goal.
 
-Skills
+### Skills
 
 Displays current technologies, learning areas, and future technologies.
 
-Projects
+### Projects
 
 Shows selected projects through responsive project preview cards.
 
-Development Process
+## Development Process
 
 Describes the development workflow:
 
@@ -146,7 +170,7 @@ Describes the development workflow:
 6. Optimize Performance
 7. Deploy Project
 
-Why Work With Me
+## Why Work With Me
 
 Highlights development principles such as:
 
@@ -158,13 +182,13 @@ Highlights development principles such as:
 - Continuous Learning
 - Problem Solving
 
-Contact
+## Contact
 
 Provides contact information and a message form.
 
 ---
 
-Accessibility
+## Accessibility
 
 The project includes accessibility-focused improvements such as:
 
@@ -182,7 +206,7 @@ The project includes accessibility-focused improvements such as:
 
 ---
 
-Theme System
+## Theme System
 
 The website uses CSS custom properties to control its visual system.
 
@@ -198,7 +222,7 @@ The CSS layer controls the actual colors and visual appearance of each theme.
 
 ---
 
-JavaScript Responsibilities
+### JavaScript Responsibilities
 
 The project intentionally keeps JavaScript small.
 
@@ -215,7 +239,7 @@ The project does not use a JavaScript framework.
 
 ---
 
-Development Philosophy
+### Development Philosophy
 
 The project follows a simple frontend architecture:
 
@@ -239,7 +263,7 @@ This avoids unnecessary duplication while keeping the code understandable.
 
 ---
 
-Naming Convention
+### Naming Convention
 
 Files use lowercase kebab-case:
 
@@ -263,7 +287,7 @@ themeIcon
 
 ---
 
-SEO
+## SEO
 
 The page includes:
 
@@ -280,7 +304,7 @@ The canonical URL and Open Graph URLs should be updated with the real deployed U
 
 ---
 
-Social Preview
+## Social Preview
 
 The project supports Open Graph metadata for social sharing.
 
@@ -294,7 +318,7 @@ Recommended social preview dimensions:
 
 ---
 
-Current Learning
+## Current Learning
 
 I am continuously improving my frontend development skills through:
 
@@ -308,7 +332,7 @@ I am continuously improving my frontend development skills through:
 
 ---
 
-Future Direction
+## Future Direction
 
 Future technologies I plan to explore include:
 
@@ -321,7 +345,7 @@ These technologies are part of the learning roadmap and are not represented as c
 
 ---
 
-License
+## License
 
 This project is licensed under the terms defined in the "LICENSE" file.
 
