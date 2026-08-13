@@ -419,6 +419,7 @@ text-align: center;
 color: var(--text-muted);
 }
 /* Contact */
+/*
 .contact-wrap > p {
 max-width: 650px;
 margin: -0.5rem auto 2rem;
@@ -510,7 +511,7 @@ resize: vertical;
 .sec2 .btn {
 align-self: flex-start;
 margin-top: 1rem;
-}
+} */
 /* Footer */
 footer {
 display: flex;
